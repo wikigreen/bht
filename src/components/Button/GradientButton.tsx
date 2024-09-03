@@ -8,9 +8,8 @@ interface GradientButtonProps {
 
 const StyledButton = styled("button")<GradientButtonProps>(({ btnType }) => ({
   border: "none",
-  width: 250,
-  height: 65,
-  borderRadius: 18,
+  padding: "20px",
+  borderRadius: 12,
   textTransform: "uppercase",
   boxShadow: "0 3px 5px 2px rgba(255, 105, 135, 0.3)",
   cursor: "pointer",
