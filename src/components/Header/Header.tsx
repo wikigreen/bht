@@ -9,13 +9,13 @@ import logo from "../../assets/logo.png";
 
 export const Header: FC = () => {
   return (
-    <>
-      <Box
-        sx={{
-          padding: 2,
-          backgroundColor: "aliceblue",
-        }}
-      >
+    <Box
+      sx={{
+        width: "100%",
+        backgroundImage: "linear-gradient(180deg, aliceblue, #FFF)",
+      }}
+    >
+      <Box padding={2}>
         <Box
           sx={{
             display: "flex",
@@ -94,6 +94,6 @@ export const Header: FC = () => {
           Національно-патріотичне виховання
         </GradientButton>
       </Box>
-    </>
+    </Box>
   );
 };

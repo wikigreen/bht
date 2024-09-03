@@ -5,9 +5,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { Box, Typography } from "@mui/material";
+import "./mainPage.css";
 
 const images = [
-  "https://thebreakspear.s3.amazonaws.com/uploads/home_header/2_17_s.jpg?t=1701185695",
+  "https://placehold.co/1000",
   "https://www.ctvnews.ca/polopoly_fs/1.4270510.1570292473!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg",
   "https://static.independent.co.uk/2021/08/13/12/GettyImages-170126264.jpg",
 ];
@@ -20,6 +21,7 @@ export const Main: FC = () => {
         padding: 4,
         flexDirection: { xs: "column", lg: "row" },
         alignItems: "center",
+        maxWidth: "lg",
       }}
     >
       {/* Swiper Container */}
@@ -41,6 +43,7 @@ export const Main: FC = () => {
                 sx={{
                   maxHeight: "400px",
                   borderRadius: 8,
+                  maxWidth: "610px",
                 }}
                 alt={"logo"}
                 src={image}
@@ -57,7 +60,7 @@ export const Main: FC = () => {
           alignSelf: "flex-start",
         }}
       >
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h3" gutterBottom>
           Про нас
         </Typography>
         <Typography variant="body1" color="text.secondary">
