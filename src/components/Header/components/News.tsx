@@ -56,8 +56,7 @@ export const News: FC = () => {
                 paddingBottom: "32px",
               }}
             >
-              <Link
-                href="/hello"
+              <Box
                 sx={{
                   width: "100%",
                   height: "100%",
@@ -84,14 +83,16 @@ export const News: FC = () => {
                     alignSelf: "flex-start",
                   }}
                 >
-                  <Typography variant="h3" gutterBottom>
-                    Про нас
-                  </Typography>
+                  <Link href="/hello">
+                    <Typography variant="h3" gutterBottom>
+                      Новина
+                    </Typography>
+                  </Link>
                   <Typography variant="body1" color="text.secondary">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Typography>
                 </Box>
-              </Link>
+              </Box>
             </SwiperSlide>
           ))}
         </Swiper>
