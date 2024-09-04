@@ -16,7 +16,7 @@ const images = [
 
 export const Main: FC = () => {
   return (
-    <Box sx={{ maxWidth: "lg"}}>
+    <Box sx={{ maxWidth: "lg" }}>
       <Box
         display="flex"
         sx={{
@@ -80,7 +80,7 @@ export const Main: FC = () => {
           </Typography>
         </Box>
       </Box>
-      <Divider sx={{my: 8}}/>
+      <Divider sx={{ my: 8 }} />
       <News />
     </Box>
   );

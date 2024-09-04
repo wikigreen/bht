@@ -1,8 +1,13 @@
 import { FC } from "react";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Button, Divider, Link, Typography } from "@mui/material";
 import { GradientButton } from "../../Button";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { IconButton } from "@mui/material";
+import {
+  ArrowBackIosNewRounded,
+  ArrowForwardIosRounded,
+} from "@mui/icons-material";
 
 const images = [
   "https://placehold.co/5",
@@ -34,13 +39,13 @@ export const News: FC = () => {
         <Divider />
         <GradientButton btnType={"btn1"}>Подивитися всі</GradientButton>
       </Box>
-      <Box maxWidth="800px" display="flex" gap={4} flexDirection="row">
-        <button className="arrow-left arrow">Prev</button>
+      <Box maxWidth="850px" display="flex" flexDirection="row">
+        <Button className="arrow-left" startIcon={<ArrowBackIosNewRounded />} />
         <Swiper
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
           spaceBetween={20}
-          slidesPerView={3}
+          slidesPerView={2}
           navigation={{ nextEl: ".arrow-right", prevEl: ".arrow-left" }}
         >
           {images.map((image, index) => (
@@ -50,23 +55,25 @@ export const News: FC = () => {
                 display: "flex",
                 justifyContent: "center",
                 paddingBottom: "32px",
-                marginLeft: "32px",
               }}
             >
-              <Box
+              <Link
+                href="/hello"
                 sx={{
+                  width: "100%",
+                  height: "100%",
                   padding: 1,
-                  width: "250px",
                   display: "flex",
                   flexDirection: "column",
+                  justifyContent: "space-between",
                 }}
               >
                 <Box
                   component="img"
                   sx={{
-                    height: "200px",
+                    width: "100%",
+                    height: "300px",
                     borderRadius: 8,
-                    maxWidth: "300px",
                     objectFit: "cover",
                   }}
                   alt={"logo"}
@@ -85,11 +92,14 @@ export const News: FC = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Typography>
                 </Box>
-              </Box>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className="arrow-right arrow">next</button>
+        <Button
+          className="arrow-right"
+          startIcon={<ArrowForwardIosRounded />}
+        />
       </Box>
     </Box>
   );
