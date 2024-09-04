@@ -3,7 +3,6 @@ import { Box, Button, Divider, Link, Typography } from "@mui/material";
 import { GradientButton } from "../../Button";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { IconButton } from "@mui/material";
 import {
   ArrowBackIosNewRounded,
   ArrowForwardIosRounded,
